@@ -11,7 +11,18 @@
 			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
 			http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 <context:annotation-config></context:annotation-config>
-<context:component-scan base-package="tn.iset.mahdia.formation.sevices"></context:component-scan>
+<context:component-scan base-package="tn.iset.mahdia.formation.sevices,tn.iset.mahdia.formation.dao"></context:component-scan>
+<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">  
+<property name="dataSource" ref="dataSource"></property>  
+</bean>  
+<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/formation" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
 			
 <!-- 			<bean id="myService" class="tn.iset.mahdia.formation.sevices.MyService" > -->
 <!-- 			<property name="commonService" ref="commonService"></property> -->

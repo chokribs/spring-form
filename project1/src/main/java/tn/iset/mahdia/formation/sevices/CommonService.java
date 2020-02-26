@@ -1,8 +1,11 @@
 package tn.iset.mahdia.formation.sevices;
 
-import org.springframework.stereotype.Component;
+import javax.inject.Named;
 
-@Component
+//import org.springframework.stereotype.Component;
+
+//@Component
+@Named
 public class CommonService {
 	public String getInitiale() {
 		return "Mr. ";
