@@ -20,10 +20,10 @@ public class App
     public static void main( String[] args )
     {
     	bootStrapping();
-    	//senario1();
+    	senario1();
     	//senario2();
 //    	senario3();
-    	senario4() ;
+    	//senario4() ;
     }
     
     private static void senario2() {
